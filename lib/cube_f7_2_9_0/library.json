@@ -1,0 +1,20 @@
+{
+  "name": "cube_f7_2_9_0",
+  "version": "2.9.0",
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "flags": [
+        "-DUSE_HAL_DRIVER", 
+        "-DSTM32F746xx"
+    ],
+    "srcFilter": [
+        "+<Drivers/STM32F7xx_HAL_Driver/Src/*.c>",
+        "+<Drivers/BSP/STM32746G-Discovery/*.c>",
+        "+<Drivers/BSP/Components/wm8994/*.c>",
+        "+<Drivers/BSP/Components/rk043fn48h/*.c>",
+        "+<Drivers/BSP/Components/ft5336/*.c>",
+        "+<Utilities/Fonts/*.c>"
+    ]
+  }
+}
