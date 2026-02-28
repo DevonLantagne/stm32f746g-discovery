@@ -1,29 +1,33 @@
 # The STM32F746G-Discovery DSP Repository
 
-This repository contains a PlatformIO-based codebase that compiles DSP programs onto a `STM32F746G-Discovery` board. Multiple example files can be found in `/examples`. Build environments are used to select which example file is copmiled. Check out the [example `readme.md` file](/examples/readme.md) for instructions on selecting build environments.
+This repository contains a PlatformIO-based codebase that compiles DSP programs onto a [STM32F746G-Discovery](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html) board for DSP education. Multiple example files can be found in `/examples`. Build environments are used to select which example file is compiled. MATLAB utilities are also provided to supplement lab activities.
 
-## PlatformIO Toolchain and VS Code IDE
+## Quick Start
 
-This project uses the PlatformIO toolchain, an extension of VS Code, to build the project and provide some starter files (such as Cortex-M startup assembly). This repository contains CMSIS headers, the Board Support Package (BSP) for the Discovery, and HAL drivers (from ST's version `2.9.0`).
+See [`docs/quick_start_guide.md`](/docs/quick_start_guide.md) on how to set up VS Code to build and run an example on your hardware.
 
-PlatformIO uses the GNU C compiler `gcc` as well as the GNU ARM assembler `gcc-arm-none-eabi`.
+## Key Directories
 
-Build configuration can be found in `platformio.ini` in the root of the repo. The ST drivers can be found in `/lib/cube_f7_2_9_0`. Wrappers are found in the primary application directory of `/src` and `/include`.
+For a full description of the entire repository file structure, see [`docs/repo_structure.md`](/docs/repo_structure.md).
 
-For more information on the toolchain, see [`toolchain_notes.md`](/docs/toolchain_notes.md).
+### `/examples`
 
-### VS Code
+The `/examples` directory contains source files that contain the program's `main()` entrypoint as well as application-specific hooks such as the data-sampled ISR or DMA processing. This is where you will spend most of your time.
 
-This project is best built and edited in VS Code (VSC) as VSC can be configured with extensions to improve the building and editing experience. Some notable extensions are:
+Only one of these files can be included in a build at one time since they all contain `main()`. You tell PIO which one to build by selecting the corresponding build environment in the bottom status bar. Build environments are defined in the `platformio.ini` file. See [`docs/build_system.md`](/docs/build_system.md) for more information.
 
-- **PlatformIO**: to build and debug the embedded application.
-- **Markdown**: to render these `readme.md` files as pretty text (although this is optional).
-- **MATLAB**: to connect VS Code to your existing MATLAB interpreter to run simple programs (see the `/matlab` directory for examples and read its [`readme.md`](/matlab/readme.md)).
+### `/src` and `/include`
 
-To install these extensions, it is recommended to use the provided VSC profile in this repository (located in `/.vscode`). Open VSC's Profile Editor to import this profile. This will bring in all the extensions automatically. Otherwise, if you prefer to use your own extension set, you can manually install extensions.
+This is the shared logic used by all examples. This includes the audio codec and display configuration as well as interrupt hooks.
 
-# Lab Experiments
+### `/matlab`
 
-Lab experiment entry code is stored in `/examples`. Each of these files contains a `main()` entrypoint and thus only one of these files can be compiled at a time (files in the `/src` folder are always compiled).
+This directory contains MATLAB utility scripts and functions that are referenced in lab activities.
 
-To change experiments, we must tell PlatformIO to build a specific source file in the `/examples` directory. This is done by selecting a build environment defined in `platformio.ini`.
+### `/lib`
+
+This contains the ST firmware package (CMSIS, HAL, and BSP) which is the foundation of all examples.
+
+### `/docs`
+
+Contains additional documentation.
