@@ -24,7 +24,7 @@ This document shows you how to set up VS Code (VSC) to run an example.
 
     > This will also add the project to the "Folders & Workspaces" section of the profile. Now whenever you open this project folder in VSC, this profile will automatically activate.
 
-You now now configured VS Code to use the PlatformIO extension!
+You have now configured VS Code to use the PlatformIO extension!
 
 ## Installing the ST-Link Driver
 
