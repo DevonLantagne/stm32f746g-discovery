@@ -6,6 +6,24 @@ This repository contains a PlatformIO-based codebase that compiles DSP programs 
 
 See [`docs/quick_start_guide.md`](/docs/quick_start_guide.md) on how to set up VS Code to build and run an example on your hardware.
 
+## Documentation
+
+### Repository Documentation
+
+Further documentation an be found in `/docs`:
+
+- [Porting from Keil uVision to PlatformIO: `keil_to_pio.md`](/docs/keil_to_pio.md)
+- [Using VS Code: `vscode_guide.md`](/docs/vscode_guide.md)
+- [Understanding the repository structure: `repo_structure.md`](/docs/repo_structure.md)
+- [PlatformIO Build System: `build_system.md`](/docs/build_system.md)
+- [Using the VS Code Debugger with GDB: `debugging.md`](/docs/debugging.md)
+
+### External Documentation
+
+- [STM32F746G-Discovery ST Product Page](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html)
+- [PlatformIO Documentation](https://docs.platformio.org/en/stable/home/index.html)
+- [VS Code Documentation](https://code.visualstudio.com/Docs)
+
 ## Key Directories
 
 For a full description of the entire repository file structure, see [`docs/repo_structure.md`](/docs/repo_structure.md).
@@ -27,7 +45,3 @@ This directory contains MATLAB utility scripts and functions that are referenced
 ### `/lib`
 
 This contains the ST firmware package (CMSIS, HAL, and BSP) which is the foundation of all examples.
-
-### `/docs`
-
-Contains additional documentation.
