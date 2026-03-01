@@ -4,6 +4,8 @@ This document shows you how to set up VS Code (VSC) to run an example.
 
 ## VS Code Setup
 
+There is not much to set up in VS Code aside from importing a profile:
+
 1. Install [VS Code](https://code.visualstudio.com/download).
 
 2. Open the repository in VS Code.
@@ -12,7 +14,7 @@ This document shows you how to set up VS Code (VSC) to run an example.
 
 3. Import a preconfigured VS Code profile.
 
-    Open your profile settings with `File > Preferences > Profile (something) > Profiles`. A new tab will open in VS Code called *Profiles*.
+    Open your profile settings with `File > Preferences > Profile (maybe something) > Profiles`. A new tab will open in VS Code called *Profiles*.
 
     In the top left of the *Profiles* tab, click the down-arrow next to *New Profile* and select *Import Profile...*. Import the profile located at `.vscode/DSP_STM_Discovery.profile`.
 

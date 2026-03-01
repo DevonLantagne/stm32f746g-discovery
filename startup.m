@@ -3,9 +3,9 @@
 % in the directory containing this file, it will automatically 
 % execute this script.
 %
-% This script adds the "matlab_new" directory to the MATLAB path
+% This script adds the "matlab" directory to the MATLAB path
 % so users can easily call functions.
 
 repoRoot = fileparts(mfilename('fullpath'));
-matlabNewPath = fullfile(repoRoot, "matlab_new");
+matlabNewPath = fullfile(repoRoot, "matlab");
 addpath(matlabNewPath)
