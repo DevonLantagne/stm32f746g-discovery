@@ -39,8 +39,7 @@ function write_fir_header(coeff, filename, opts)
 
     fid = fopen(filename, 'wt');
     if fid == -1
-        error('write_fir_header:FileOpenError', ...
-            'Unable to open file: %s', filename);
+        error('Unable to open file: %s', filename);
     end
 
     cleanupObj = onCleanup(@() fclose(fid));

@@ -14,4 +14,4 @@ To access the MATLAB interpreter:
 
 ## Startup Script
 
-This repository contains the MATLAB startup script `startup.m` which will execute when the MATLAB terminal opens. This startup script will add the `/matlab_new` directory to the path so all related functions and scripts can be called from the root of the repository.
+This repository contains the MATLAB startup script `startup.m` which will execute when the MATLAB terminal opens. This startup script will add the `/matlab` directory to the path so all related functions and scripts can be called from the root of the repository.
