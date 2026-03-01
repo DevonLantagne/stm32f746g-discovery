@@ -30,9 +30,9 @@ You have now configured VS Code to use the PlatformIO extension!
 
 ## Installing the ST-Link Driver
 
-The STM32F7 can be flashed using the ST-Link USB driver.
+### Windows
 
-[add instructions here]
+Windows does not know how to communicate with the board via USB. We need to install the ST-Link USB driver. You can visit ST's [ST-Link page](https://www.st.com/en/development-tools/stsw-link009.html) to download and install the driver. You may need an ST account to download the driver.
 
 ## Building and Flashing a Project
 
