@@ -259,8 +259,8 @@ int main(void)
 						SOURCE_FILE_NAME,
 						NOGRAPH);
 	
-	
-	if (BSP_TS_Init(480, 272) != TS_OK) {
+	volatile uint8_t ts_status = BSP_TS_Init(480, 272);
+	if (ts_status != TS_OK) {
 		// Initialization failed � handle error
 	}
 	
