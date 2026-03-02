@@ -1,6 +1,6 @@
 # The STM32F746G-Discovery DSP Repository
 
-This repository contains a PlatformIO-based codebase that compiles DSP programs onto a [STM32F746G-Discovery](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html) board for DSP education. Multiple example files can be found in `/examples`. Build environments are used to select which example file is compiled. MATLAB utilities are also provided to supplement lab activities.
+This repository contains a PlatformIO-based codebase that compiles DSP programs onto a [STM32F746G-Discovery](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html) board for DSP education. Multiple example files can be found in `/examples`. Build environments are used to select which example file is compiled. Both MATLAB and Python utilities are also provided to supplement lab activities.
 
 ## Quick Start
 
@@ -40,7 +40,13 @@ This is the shared logic used by all examples. This includes the audio codec and
 
 ### `/matlab`
 
-This directory contains MATLAB utility scripts and functions that are referenced in lab activities.
+This directory contains MATLAB utility scripts and functions that are referenced in lab activities. Requires MATLAB to be installed on the host.
+
+### `/python`
+
+Contains Python utility scripts and functions as alternatives to the MATLAB utilities. Requires Python to be installed on the host. 
+
+Be sure to run the `setup_env.py` script to create a virtual environment for Python packages. When running the `setup_env.py`, ignore any notifications about virtual environments.
 
 ### `/lib`
 
