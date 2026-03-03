@@ -26,7 +26,7 @@ From now on, every time you open this repo, VSC will activate this virtual envir
 
 ## Running Python Files
 
-The Python files in `/python` are a package which allow it to be easily imported in interactive Python or in scripts.
+The Python files in `/dsp_python` are a package which allow it to be easily imported in interactive Python or in scripts.
 
 The easiest method to run Python scripts is to right-click a `.py` file and select *Run Python File in Terminal*.
 
@@ -41,6 +41,6 @@ You can then run the `python` command in PowerShell which will then access the P
 Now you can import modules from the package and call their functions:
 
 ```python
-from python import write_fir_header
+from dsp_python import write_fir_header
 write_fir_header.generate_fir_header(arg1,arg2)
 ```

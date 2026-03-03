@@ -42,7 +42,7 @@ This is the shared logic used by all examples. This includes the audio codec and
 
 This directory contains MATLAB utility scripts and functions that are referenced in lab activities. Requires MATLAB to be installed on the host.
 
-### `/python`
+### `/dsp_python`
 
 Contains Python utility scripts and functions as alternatives to the MATLAB utilities. Requires Python to be installed on the host. 
 
