@@ -11,27 +11,27 @@ static void MPU_Config(void);
 static void CPU_CACHE_Enable(void);
 
 // structures and functions used to generate PRBS sequence
- typedef union 
+typedef union 
 {
- uint16_t value;
- struct 
- {
-	 unsigned char bit0 : 1;
-	 unsigned char bit1 : 1;
-	 unsigned char bit2 : 1;
-	 unsigned char bit3 : 1;
-	 unsigned char bit4 : 1;
-	 unsigned char bit5 : 1;
-	 unsigned char bit6 : 1;
-	 unsigned char bit7 : 1;
-	 unsigned char bit8 : 1;
-	 unsigned char bit9 : 1;
-	 unsigned char bit10 : 1;
-	 unsigned char bit11 : 1;
-	 unsigned char bit12 : 1;
-	 unsigned char bit13 : 1;
-	 unsigned char bit14 : 1;
-	 unsigned char bit15 : 1;
+  uint16_t value;
+  struct 
+  {
+    unsigned char bit0 : 1;
+    unsigned char bit1 : 1;
+    unsigned char bit2 : 1;
+    unsigned char bit3 : 1;
+    unsigned char bit4 : 1;
+    unsigned char bit5 : 1;
+    unsigned char bit6 : 1;
+    unsigned char bit7 : 1;
+    unsigned char bit8 : 1;
+    unsigned char bit9 : 1;
+    unsigned char bit10 : 1;
+    unsigned char bit11 : 1;
+    unsigned char bit12 : 1;
+    unsigned char bit13 : 1;
+    unsigned char bit14 : 1;
+    unsigned char bit15 : 1;
   } bits;
 } shift_register;
 
@@ -67,7 +67,7 @@ uint32_t rand31_next()
 // function returns random number in range +/- 8192
 int16_t prand()
 {
-return ((int16_t)(rand31_next()>>18)-4096);
+  return ((int16_t)(rand31_next()>>18)-4096);
 }
 
 // flags similar to those used in STM32F4 program examples
