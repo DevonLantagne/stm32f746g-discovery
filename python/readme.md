@@ -6,6 +6,10 @@ This folder contains Python scripts and functions that you call directly from VS
 
 Install Python on your host machine.
 
+Visit [Python.org](https://www.python.org/downloads/) to download Python for your system and install it.
+
+**IMPORTANT:** During the installation process you may be asked to "Add python.exe to your path". Ensure that box is checked!
+
 [Instructions]
 
 ## Setup
