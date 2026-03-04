@@ -2,6 +2,9 @@
 
 This repository contains a PlatformIO-based codebase that compiles DSP programs onto a [STM32F746G-Discovery](https://www.st.com/en/evaluation-tools/32f746gdiscovery.html) board for DSP education. Multiple example files can be found in `/examples`. Build environments are used to select which example file is compiled. Both MATLAB and Python utilities are also provided to supplement lab activities.
 
+> [!CAUTION]
+> This repository is currently under heavy development! Expect files and directories to change.
+
 ## Quick Start
 
 See [`docs/quick_start_guide.md`](/docs/quick_start_guide.md) on how to set up VS Code to build and run an example on your hardware.
