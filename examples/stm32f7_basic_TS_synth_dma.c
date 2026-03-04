@@ -1,7 +1,4 @@
 // stm32f7_basic_TS_synth_dma.c
-// Jay's Lab
-//
-// Gets caught in MemManage_Handler()
 
 #include "stm32f7_wm8994_init.h"
 #include "stm32f7_display.h"
