@@ -27,7 +27,7 @@ static uint8_t LastPress;						// 1 if TS pressed in previous DMA block
 static float32_t theta;							// keeps track of signal phase
 const float32_t sampleFreq = 8000.0;			// use 8000 Hz sample rate in DMA mode with TS input
 int j, k;
-static float32_t freq[5] = {440, 880, 1760, 3520, 7040};						// NEED TO ASSIGN FREQUENCIES FOR EACH MODE (KEY PRESS)
+static float32_t freq[5];						// NEED TO ASSIGN FREQUENCIES FOR EACH MODE (KEY PRESS)
 static float32_t thetaIncr[5];					// corresponding digital frequencies (computed in main())
 static int16_t amplitude = 2000;				// amplitude for synth output
 static uint8_t CircleOn = 0;					// default state off = 0; on if nonzero
@@ -259,9 +259,9 @@ int main(void)
 						SOURCE_FILE_NAME,
 						NOGRAPH);
 	
-	volatile uint8_t ts_status = BSP_TS_Init(480, 272);
-	if (ts_status != TS_OK) {
-		// Initialization failed � handle error
+	if (BSP_TS_Init(480, 272) != TS_OK) {
+		// Initialization failed; is your touchscreen dead?
+		while(1) {};
 	}
 	
 	BSP_LCD_Init();
