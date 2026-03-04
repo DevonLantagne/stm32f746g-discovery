@@ -42,11 +42,11 @@ This is the shared logic used by all examples. This includes the audio codec and
 
 This directory contains MATLAB utility scripts and functions that are referenced in lab activities. Requires MATLAB to be installed on the host.
 
-### `/dsp_python`
+### `/python_dsp`
 
 Contains Python utility scripts and functions as alternatives to the MATLAB utilities. Requires Python to be installed on the host. 
 
-Be sure to run the `setup_env.py` script to create a virtual environment for Python packages. When running the `setup_env.py`, ignore any notifications about virtual environments.
+Be sure to run the `setup_env.py` script to create a virtual environment for Python packages. When running the `setup_env.py`, ignore any notifications about virtual environments. If you already have Python on your system, try right-clicking `setup_env.py` and selecting *"Run Python file in terminal"*.
 
 ### `/lib`
 
