@@ -16,14 +16,16 @@ There is not much to set up in VS Code aside from importing a profile:
 
     Open your profile settings with `File > Preferences > Profile (maybe something) > Profiles`. A new tab will open in VS Code called *Profiles*.
 
-    In the top left of the *Profiles* tab, click the down-arrow next to *New Profile* and select *Import Profile...*. Import the profile located at `.vscode/DSP_STM_Discovery.profile`.
+    In the top left of the *Profiles* tab, click the down-arrow next to *New Profile* and select *Import Profile...*. Import the profile located at `.vscode/DSP STM Discovery.profile`.
 
+    > [!NOTE]
     > This will add a profile to VSC which adjusts settings such as theme, keyboard shortcuts, and extensions. We just need the extensions. This will install extensions such as PlatformIO, MATLAB, and 'nice to have' extensions like Markdown.
 
     For more information on VSC Profiles, visit [their documentation](https://code.visualstudio.com/docs/configure/profiles).
 
 4. Link the repository with the profile. You should see the `DSP STM Discovery` profile in the list of profile. Hover over the profile and click the checkmark to make this the active profile for the current project. You may see several notifications or tabs open after you click this - the extensions are activating.
 
+    > [!NOTE]
     > This will also add the project to the "Folders & Workspaces" section of the profile. Now whenever you open this project folder in VSC, this profile will automatically activate.
 
 You have now configured VS Code to use the PlatformIO extension!

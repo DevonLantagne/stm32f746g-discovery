@@ -8,7 +8,8 @@ Install Python on your host machine.
 
 Visit [Python.org](https://www.python.org/downloads/) to download Python for your system and install it.
 
-**IMPORTANT:** During the installation process you may be asked to "Add python.exe to your path". Ensure that box is checked!
+> [!IMPORTANT]
+> During the installation process you may be asked to "Add python.exe to your path". Ensure that box is checked!
 
 ## Python in VS Code
 
@@ -20,12 +21,14 @@ The Python code in this repo needs external packages to function. Instead of pol
 
 In VS Code, right-click the `setup_env.py` script and select *"Run Python File in Terminal"*. This script will create the venv and install the required packages specified in `requirements.txt`.
 
+> [!NOTE]
 > Please ignore any notifications that pop up in the bottom right corner of VS Code. We will have an opportunity to select the venv manually in the next step.
 
 After the venv is created and packages are installed, we need to tell VS Code to use this environment when you run `.py` files. Open the VSC command palette (CTRL + SHIFT + P) and start typing *Python: Select Interpreter*. Press ENTER. You will see a list of enviornments previously used or detected by VS Code. Select the environment whos path starts with a dot `.`. VSC will likely list this as the *recommended* venv.
 
 From now on, every time you open this repo, VSC will activate this virtual environment and use the packages installed in the `/.venv` directory. 
 
+> [!TIP]
 > You can kill the `/.venv` directory and rebuild it by re-running the `setup_env.py` again.
 
 ## Immporting Utility Functions

@@ -4,6 +4,7 @@ The MATLAB extension of VS Code allows VSC to access the MALTAB interpreter via 
 
 The extension also brings in color formatting to edit MATLAB scripts.
 
+> [!WARNING]
 > Live Scripts `.mlx` are not supported.
 
 ## MATLAB in VS Code

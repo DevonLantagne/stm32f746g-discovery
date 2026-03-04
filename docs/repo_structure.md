@@ -32,6 +32,14 @@ This repository includes a `startup.m` script in the directory root. When MATLAB
 
 Using MATLAB requires MATLAB to be installed on your machine and you must have the MATLAB extension in VS Code (which the `DSP STM Discovery` profile includes).
 
+## Python
+
+This repository includes some Python utilities related to lab activities which have the same functionality as MATLAB. These can be found in `/python_dsp`.
+
+This repo contains a `setup_env.py` file which will create a virtual environment in `/.venv`.
+
+See the [`/docs/python.md`](/docs/python.md) tutorial for setup.
+
 ## VS Code
 
 The `/.vscode` directory contains configuration files for VS Code. PlatformIO automatically generates `c_cpp_properties.json` and `launch.json`, so do not change these. These tell PIO what to do when the debugger is started.
