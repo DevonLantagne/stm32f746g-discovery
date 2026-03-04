@@ -26,21 +26,50 @@ From now on, every time you open this repo, VSC will activate this virtual envir
 
 ## Running Python Files
 
-The Python files in `/dsp_python` are a package which allow it to be easily imported in interactive Python or in scripts.
+The Python files in `/python_dsp` are a package which allow it to be easily imported in interactive Python or in scripts.
 
 The easiest method to run Python scripts is to right-click a `.py` file and select *Run Python File in Terminal*.
 
-For functions, it would be best to use command line Python. You can either access the interpreter directly or call python from PowerShell. In either case, first open a new PowerShell terminal in VSC. You will notice VSC step in and automatically activate the `(.venv)` virtual enviornment.
+For functions, it would be best to use command line Python (REPL). You can either access the interpreter directly or call python from PowerShell. In either case, first open a new PowerShell terminal in VSC. You will notice VSC step in and automatically activate the `(.venv)` virtual enviornment.
 
 ### Interactive Python
 
-The first way to run Python is to use the interactive terminal (Read-Eval-Print Loop: REPL).
+The first way to run Python is to use the interactive terminal (Read-Eval-Print Loop: REPL). Open a PowerShell terminal and run `python`. You should see the REPL prompt of `>>>`.
 
-You can then run the `python` command in PowerShell which will then access the Python interpreter (>>>).
-
-Now you can import modules from the package and call their functions:
+Now you can import functions from the module:
 
 ```python
-from dsp_python import write_fir_header
-write_fir_header.generate_fir_header(arg1,arg2)
+from python_dsp import plot_real
+plot_real("output.dat")
 ```
+
+You can exit REPL mode by executing `exit()`.
+
+#### Example
+
+We can generate header files containing FIR coefficients for the DSP hardware using the `write_fir_header` function. It takes the args:
+
+- `b`: b coefficient array
+- `filename`: The name of the header file to create and save in the repo root.
+
+There are optional keyword args:
+
+- `array_name`: The name of the array to instantiate in C (default: `h`).
+- `macro_name`: The name of the array length macro (default: `N`).
+- `line_width`: How many values to print per line (default: `6`).
+
+In REPL:
+
+```python
+# Import function from module
+from python_dsp import write_fir_header
+
+# Create an FIR coefficient array
+b = [0.1, 0.2, 0.3, 0.4, 0.5]
+
+# Call the function to generate a file named "fir_coeffs.h".
+# The array will get the default name 'h' and macro length name is 'N'
+write_fir_header(b, "fir_coeffs.h")
+```
+
+The optional keyword args are useful if you have more than one filter (different variable names and lengths).
