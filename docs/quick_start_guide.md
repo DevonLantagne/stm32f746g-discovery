@@ -39,6 +39,8 @@ There is not much to set up in VS Code aside from importing a profile. Profiles 
 
 You have now configured VS Code to use the PlatformIO extension!
 
+Get to know VS Code with [this tutorial](/docs/vscode_guide.md).
+
 ## Installing the ST-Link Driver
 
 ### Windows
