@@ -26,6 +26,8 @@ There is not much to set up in VS Code aside from importing a profile. Profiles 
 
     In the top left of the *Profiles* tab, click the down-arrow next to *New Profile* and select *Import Profile...*. Import the profile located at `/.vscode/DSP STM Discovery.profile` in this repo.
 
+    You will then see the imported profile and can rename it or make adjustments. Click *Create* when ready. This profile uses a dark theme but you can change that after you import the profile.
+
 > [!NOTE]
 > This will add a profile to VSC which adjusts settings such as theme, keyboard shortcuts, and extensions. We just need the extensions. This will install extensions such as PlatformIO IDE, MATLAB, Python, and 'nice-to-have' extensions like Markdown. After importing the profile, you can change the color theme, adjust keyboard shortcuts, and extensions if needed.
 > 
@@ -55,6 +57,8 @@ Windows does not know how to communicate with the board via USB. We need to inst
 
 ## Building and Flashing a Project
 
+![Uploading a Project](/docs/assets/UploadFirmware.webp)
+
 This project's `platformio.ini` file has been configured with build environments which tells PIO what file has the main entry point (one of the files in `/examples`). You can change this by clicking the icon in the bottom status bar that has a folder with a circle in the bottom left:
 
 ![BuildEnvironmentIcon](/docs/assets/BuildEnvironmentButton.png)
@@ -63,7 +67,7 @@ This project's `platformio.ini` file has been configured with build environments
 
 Clicking this icon will open a dropdown menu in VSC where you can select which entry point file to use. You can also type in the search box to narrow the search.
 
-With a build environment selected, you can build the project by clicking the checkmark in in the bottom status bar or `CTRL + ALT + B`. This action runs a task in VSC to build the project.
+With a build environment selected, you can build the project by clicking the checkmark in in the bottom status bar, top right of the editor, or `CTRL + ALT + B`. This action runs a task in VSC to build the project.
 
 You can upload (flash) a build by clicking the `->` arrow icon in the bottom status bar or `CTRL + ALT + U`.
 
