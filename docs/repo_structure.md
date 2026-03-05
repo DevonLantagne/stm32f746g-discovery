@@ -16,7 +16,7 @@ The `/src`, `/include`, and `/lib` directories are all standard PIO directories:
 
 - `/src` Contains shared application logic used across examples. These will always be compiled by PIO unless the configuration says otherwise.
 - `/include` Contains project-specific header files.
-- `/lib/cube_f7_2_9_0` Contains the STM32CubeF7 2.9.0 firmware package from STMicroelectronics with a few patches already applied. The organization of the firmware package is very precise - please see [`docs/firmware_stack.md`](/docs/firmware_stack.md) for more information.
+- `/lib/cube_f7_2_9_0` Contains the STM32CubeF7 2.9.0 firmware package from STMicroelectronics with a few patches already applied. The organization of the firmware package is very precise - please see [`docs/keil_to_pio.md`](/docs/keil_to_pio.md) for more information.
 
 The `/.pio` directory contains build artifacts and can be removed at any time.
 
