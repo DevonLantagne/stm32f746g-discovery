@@ -4,6 +4,8 @@ PlatformIO uses the GNU Debugger (GDB) and can be accessed when running the prog
 
 ## Starting the Debugger
 
+![Starting the Debugger](/docs/assets/Debugging.webp)
+
 In VSC's Activity Bar (left side), click the `Run and Debug` icon (bug on play triangle) or use the shortcut `CTRL + SHIFT + D`. At the top of the primary panel you will see a play button next to the words "PIO Debug", clicking that will compile the project in debug mode, upload the code to the board, and start execution until the embedded system reaches your `main()` entrypoint.
 
 Be patient! You may see a small blue line move across the top of the panel near the debug button. This line indicates it is working.
