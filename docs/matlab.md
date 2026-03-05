@@ -13,6 +13,8 @@ Ensure you have the *DSP Profile* installed and running for this repository. The
 
 ## Accessing MATLAB in VS Code
 
+![MATLAB Terminal](/docs/assets/MATLABterminal.webp)
+
 To access the MATLAB interpreter:
 
 - Open the **terminal** panel in VS Code via the menu `View > Terminal` or `` CTRL + ` ``.
@@ -21,6 +23,8 @@ To access the MATLAB interpreter:
 
 - You will see a new terminal open and a new status widget on the bottom of VS Code indicating `MATLAB: Establishing Connection` or `MATLAB: Connected`. Once connected, you should see the command prompt `>>`. You now have full access to the MATLAB interpreter for running commands, functions, and generating figures.
 
+> [!NOTE]
+> If you created the Python venv, the Python extension will always append the activation script to any new terminal (such as MATLAB). This obviously does not work in MATLAB so you will see a syntax error like that in the animation. This is not a problem. To fix this, we would need to configure terminal profiles which is a bit overkill for this application.
 
 ## Startup Script
 
