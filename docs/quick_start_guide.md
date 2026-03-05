@@ -20,6 +20,8 @@ There is not much to set up in VS Code aside from importing a profile. Profiles 
 
 3. Import the preconfigured VS Code profile.
 
+    ![Import VSC Profile](/docs/assets/ImportProfile.webp)
+
     Open your profile settings with `File > Preferences > Profile (maybe something) > Profiles`. A new tab will open in VS Code called *Profiles*.
 
     In the top left of the *Profiles* tab, click the down-arrow next to *New Profile* and select *Import Profile...*. Import the profile located at `/.vscode/DSP STM Discovery.profile` in this repo.
