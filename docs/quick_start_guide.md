@@ -59,6 +59,8 @@ Windows does not know how to communicate with the board via USB. We need to inst
 
 ![Uploading a Project](/docs/assets/UploadFirmware.webp)
 
+> In the animation above, we first opened the build environment selector and searched for the `stm32f7_loop_intr` environment. You will see PIO reconfigure itself for this environment. Because this does not open the entrypoint source code automatically, we then search for the file by clicking on the search bar and typing `loop_intr` until we see the file we want to edit. This will be a common workflow pattern.
+
 This project's `platformio.ini` file has been configured with build environments which tells PIO what file has the main entry point (one of the files in `/examples`). You can change this by clicking the icon in the bottom status bar that has a folder with a circle in the bottom left:
 
 ![BuildEnvironmentIcon](/docs/assets/BuildEnvironmentButton.png)
