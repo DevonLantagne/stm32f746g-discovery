@@ -53,7 +53,17 @@ Windows does not know how to communicate with the board via USB. We need to inst
 
 ### Linux
 
-[TODO] Should use `udev` and might need rules. Otherwise no driver needed.
+Linux doesn't need the ST-link driver because its generic USB core already exposes every connected USB device as a raw device node.
+Tools like `OpenOCD` and `pyOCD` (which PlatformIO calls internally) talk to that device node directly from userspace via `libusb`.
+The only thing missing is permission to open that device node as a regular user (default permissions are `root` only).
+Instead, Linux systems just need a udev rule that PlatformIO provides:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo udevadm control --reload-rules && sudo udevadm trigger
+```
+
+Even better, the udev rules include many vendors besides ST.
 
 ## Building and Flashing a Project
 
